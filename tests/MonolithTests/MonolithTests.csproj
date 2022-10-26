@@ -29,4 +29,8 @@
     <ProjectReference Include="..\..\src\Product.Adm\Product.Adm.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="StoreCatalog\" />
+  </ItemGroup>
+
 </Project>
