@@ -1,5 +1,6 @@
 ﻿using InfraStructure.Context;
 using InfraStructure.Model;
+using InfraStructure.Model.ProductAdm;
 using Product.Adm.Domain.Entity;
 using Product.Adm.Repository.ProductRepository.Interface;
 using System;
@@ -21,7 +22,7 @@ namespace Product.Adm.Repository.ProductRepository.Implementation
         {
             try
             {
-                _sharedContext.Products.Add(productEntity);
+                _sharedContext.ProductsAdm.Add(productEntity);
                 await _sharedContext.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -36,7 +37,7 @@ namespace Product.Adm.Repository.ProductRepository.Implementation
         {
             try
             {
-                return await _sharedContext.Products.FindAsync(id);
+                return await _sharedContext.ProductsAdm.FindAsync(id);
             }
             catch (Exception)
             {

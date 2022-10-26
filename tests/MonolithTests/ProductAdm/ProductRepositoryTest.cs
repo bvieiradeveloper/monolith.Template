@@ -1,6 +1,7 @@
 ﻿using _Shared.Domain.ValueObject;
 using InfraStructure.Context;
 using InfraStructure.Model;
+using InfraStructure.Model.ProductAdm;
 using Moq;
 using Product.Adm.Domain.Entity;
 using Product.Adm.Repository.ProductRepository.Implementation;

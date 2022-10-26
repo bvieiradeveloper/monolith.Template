@@ -1,4 +1,5 @@
 ﻿using InfraStructure.Model;
+using InfraStructure.Model.ProductAdm;
 using Product.Adm.Repository.ProductRepository.Interface;
 
 namespace Product.Adm.UseCase.AddProduct

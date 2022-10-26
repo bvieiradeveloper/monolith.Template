@@ -1,10 +1,5 @@
-﻿using InfraStructure.Model;
+﻿using InfraStructure.Model.ProductAdm;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InfraStructure.Context
 {
@@ -19,7 +14,7 @@ namespace InfraStructure.Context
         {
         }
 
-        public DbSet<ProductModel> Products { get; set; }
-
+        public DbSet<ProductModel> ProductsAdm { get; set; }
+        public DbSet<Model.StoreCatalog.ProductModel> ProductsCatalog { get; set; }
     }
 }

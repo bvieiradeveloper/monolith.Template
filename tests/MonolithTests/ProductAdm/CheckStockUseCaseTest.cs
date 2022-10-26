@@ -1,6 +1,7 @@
 ﻿using _Shared.Domain.ValueObject;
 using InfraStructure.Context;
 using InfraStructure.Model;
+using InfraStructure.Model.ProductAdm;
 using Moq;
 using Product.Adm.Domain.Entity;
 using Product.Adm.Repository.ProductRepository.Interface;
@@ -12,16 +13,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonolithTests.ProductAdm
+namespace MonolithTests
 {
     public class CheckStockUseCaseTest
     {
-        private SharedContext _db;
         private ProductModel _productModel;
         public CheckStockUseCaseTest()
         {
-            _db = InMemoryDb.InitDb();
-
             _productModel = new ProductModel
             {
 

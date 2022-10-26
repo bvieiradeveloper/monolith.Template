@@ -10,8 +10,8 @@ namespace MonolithTests
 {
     public static class InMemoryDb
     {
-        public static SharedContext db;
-        public static SharedContext GetMemoryContext()
+        static SharedContext db;
+        static SharedContext GetMemoryContext()
         {
             var options = new DbContextOptionsBuilder<SharedContext>()
             .UseInMemoryDatabase(databaseName: "InMemoryDatabase")

@@ -27,10 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Product.Adm\Product.Adm.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="StoreCatalog\" />
+    <ProjectReference Include="..\..\src\Store.Catalog\Store.Catalog.csproj" />
   </ItemGroup>
 
 </Project>

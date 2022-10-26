@@ -1,14 +1,6 @@
-﻿using _Shared.Usecase.Interface;
-using _Shared.Usecase.Props;
-using Product.Adm.Facade.DTO;
-using Product.Adm.Facade.Interface;
+﻿using Product.Adm.Facade.Interface;
 using Product.Adm.UseCase.AddProduct;
 using Product.Adm.UseCase.CheckStock;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Product.Adm.Facade.Implementation
 {

@@ -6,6 +6,7 @@ using _Shared.Domain.ValueObject;
 using Product.Adm.Factory;
 using InfraStructure.Model;
 using Product.Adm.UseCase.CheckStock;
+using InfraStructure.Model.ProductAdm;
 
 namespace MonolithTests
 {
