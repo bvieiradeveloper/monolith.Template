@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Product.Adm.UseCase.AddProduct
 {
-    public class AddProductInputDTO : ProductProps{}
+    public class AddProductInputDTO : AddProductInputDto{}
 
-    public class AddProductOutputDTO : ProductProps 
+    public class AddProductOutputDTO : AddProductInputDto 
     {
         public DateTime CreatedAt  { get; set; }
         public DateTime UpdatedAt { get; set; }

@@ -2,7 +2,7 @@
 
 namespace Product.Adm.Domain.Entity
 {
-    public abstract class ProductProps
+    public abstract class AddProductInputDto
     {
         public Id id { get; set; }
         public string Name { get; set; }

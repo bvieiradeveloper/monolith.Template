@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32901.215
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Adm.API", "src\Product.Adm.API\Product.Adm.API.csproj", "{282F6D84-9F2A-4F02-86BB-BF5FC3A6D5F7}"
 EndProject
@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "@Shared", "src\@Shared\@Sha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Adm", "src\Product.Adm\Product.Adm.csproj", "{2ED9E5C6-6DBF-4B25-9490-92B93A5374ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonolithTests", "tests\MonolithTests\MonolithTests.csproj", "{0660AFB9-3827-4BBA-A674-AA3049AAD293}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonolithTests", "tests\MonolithTests\MonolithTests.csproj", "{0660AFB9-3827-4BBA-A674-AA3049AAD293}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraStructure", "src\InfraStructure\InfraStructure.csproj", "{EABE8A1E-EE3B-473F-A22A-BA0C879A832C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfraStructure", "src\InfraStructure\InfraStructure.csproj", "{EABE8A1E-EE3B-473F-A22A-BA0C879A832C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Catalog", "src\Store.Catalog\Store.Catalog.csproj", "{0F88B055-AD63-44DE-AD9B-E10F8F757BFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{EABE8A1E-EE3B-473F-A22A-BA0C879A832C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EABE8A1E-EE3B-473F-A22A-BA0C879A832C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EABE8A1E-EE3B-473F-A22A-BA0C879A832C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F88B055-AD63-44DE-AD9B-E10F8F757BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F88B055-AD63-44DE-AD9B-E10F8F757BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F88B055-AD63-44DE-AD9B-E10F8F757BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F88B055-AD63-44DE-AD9B-E10F8F757BFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

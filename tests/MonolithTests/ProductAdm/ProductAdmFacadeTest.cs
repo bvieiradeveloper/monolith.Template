@@ -4,15 +4,29 @@ using Product.Adm.UseCase.AddProduct;
 using Product.Adm.Facade.Implementation;
 using _Shared.Domain.ValueObject;
 using Product.Adm.Factory;
+using InfraStructure.Model;
+using Product.Adm.UseCase.CheckStock;
 
 namespace MonolithTests
 {
     public class ProductAdmFacadeTest
     {
         private SharedContext _db;
+        private ProductModel _productModel;
         public ProductAdmFacadeTest()
         {
             _db = InMemoryDb.InitDb();
+            _productModel = new ProductModel
+            {
+
+                Id = "1",
+                Name = "Product 1",
+                Description = "Product 1 description",
+                PurchasePrice = 100,
+                Stock = 10,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now
+            };
         }
 
         [Fact]
@@ -39,6 +53,30 @@ namespace MonolithTests
             Assert.Equal(response.Description, "Product 1 description");
             Assert.Equal(response.PurchasePrice, 100);
             Assert.Equal(response.Stock, 10);
+        }
+
+        [Fact]
+        public async Task ShouldFindAProduct()
+        {
+            ProductAdmFacade productFactory = ProductAdmFacadeFactory.Create(_db);
+
+            AddProductInputDTO inputCreate = new AddProductInputDTO
+            {
+                id = new Id("1"),
+                Name = "Product 1",
+                Description = "Product 1 description",
+                PurchasePrice = 100,
+                Stock = 10
+            };
+
+            await productFactory.AddProduct(inputCreate);
+
+            var inputFind = new CheckStockInputDto { ProductId = "1" };
+
+            var output = await productFactory.CheckoutStock(inputFind);
+
+            Assert.Equal(output.ProductId, "1");
+            Assert.Equal(output.Stock, 10);
         }
     }
 }

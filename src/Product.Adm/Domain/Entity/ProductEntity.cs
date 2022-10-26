@@ -10,7 +10,7 @@ namespace Product.Adm.Domain.Entity
 {
     public class ProductEntity : BaseEntity, IAggregatorRoot
     {
-        public ProductEntity(ProductProps productProps) : base(productProps.id)
+        public ProductEntity(AddProductInputDto productProps) : base(productProps.id)
         {
             Name = productProps.Name;
             Description = productProps.Description; 
