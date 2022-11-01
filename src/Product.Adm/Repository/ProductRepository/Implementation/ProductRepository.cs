@@ -1,13 +1,6 @@
 ﻿using InfraStructure.Context;
-using InfraStructure.Model;
 using InfraStructure.Model.ProductAdm;
-using Product.Adm.Domain.Entity;
 using Product.Adm.Repository.ProductRepository.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Product.Adm.Repository.ProductRepository.Implementation
 {

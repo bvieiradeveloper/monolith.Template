@@ -14,11 +14,11 @@ namespace _Shared.Domain.Entity
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
 
-        public BaseEntity(Id? id)
+        public BaseEntity(Id? id, DateTime? createdAt, DateTime? updatedAt)
         {
-            _id = id;
-            CreatedAt = DateTime.Now;
-            UpdatedAt = DateTime.Now;
+            _id = id ?? new Id();
+            CreatedAt = createdAt ?? DateTime.Now;
+            UpdatedAt = updatedAt ?? DateTime.Now;
         }
         public void SetUpdatedAt(DateTime updatedAt)
         {

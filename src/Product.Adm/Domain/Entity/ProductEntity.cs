@@ -1,14 +1,11 @@
-﻿
-
-
-using _Shared.Domain.Entity;
+﻿using _Shared.Domain.Entity;
 using _Shared.Domain.Interface;
 
 namespace Product.Adm.Domain.Entity
 {
     public class ProductEntity : BaseEntity, IAggregatorRoot
     {
-        public ProductEntity(AddProductInputDto productProps) : base(productProps.id)
+        public ProductEntity(AddProductInputDto productProps) : base(productProps.id, null, null)
         {
             Name = productProps.Name;
             Description = productProps.Description; 

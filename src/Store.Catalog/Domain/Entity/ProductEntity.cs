@@ -8,7 +8,7 @@ namespace Store.Catalog.Domain.Entity
 {
     public class ProductEntity : BaseEntity, IAggregatorRoot
     {
-        public ProductEntity(ProductProps productProps) : base(productProps._id)
+        public ProductEntity(ProductProps productProps) : base(productProps._id, null, null)
         {
             Name = productProps.Name;
             Description = productProps.Description;

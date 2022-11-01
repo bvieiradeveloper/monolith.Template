@@ -1,4 +1,5 @@
-﻿using InfraStructure.Model.ProductAdm;
+﻿using InfraStructure.Model.ClientAdm;
+using InfraStructure.Model.ProductAdm;
 using Microsoft.EntityFrameworkCore;
 
 namespace InfraStructure.Context
@@ -16,5 +17,6 @@ namespace InfraStructure.Context
 
         public DbSet<ProductModel> ProductsAdm { get; set; }
         public DbSet<Model.StoreCatalog.ProductModel> ProductsCatalog { get; set; }
+        public DbSet<ClientModel> Clients { get; set; }
     }
 }

@@ -3,6 +3,12 @@
     public class Id : ValueObject
     {
         private string _id;
+
+        public Id()
+        {
+            _id =  Guid.NewGuid().ToString();
+        }
+
         public Id(string? id)
         {
             _id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id;
