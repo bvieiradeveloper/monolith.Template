@@ -4,8 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <LangVersion>preview</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Domain\ValueObject\" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\@Shared\@Shared.csproj" />

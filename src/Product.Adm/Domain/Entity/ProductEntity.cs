@@ -1,5 +1,6 @@
 ﻿using _Shared.Domain.Entity;
 using _Shared.Domain.Interface;
+using Product.Adm.Domain.ValueObject;
 
 namespace Product.Adm.Domain.Entity
 {

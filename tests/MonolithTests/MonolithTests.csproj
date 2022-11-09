@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Client.Adm\Client.Adm.csproj" />
+    <ProjectReference Include="..\..\src\Payment\Payment.csproj" />
     <ProjectReference Include="..\..\src\Product.Adm\Product.Adm.csproj" />
     <ProjectReference Include="..\..\src\Store.Catalog\Store.Catalog.csproj" />
   </ItemGroup>

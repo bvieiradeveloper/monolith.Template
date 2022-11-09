@@ -1,6 +1,6 @@
 ﻿using _Shared.Domain.ValueObject;
 
-namespace Product.Adm.Domain.Entity
+namespace Product.Adm.Domain.ValueObject
 {
     public abstract class AddProductInputDto
     {
