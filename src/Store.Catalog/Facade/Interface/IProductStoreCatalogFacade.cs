@@ -1,5 +1,5 @@
-﻿using Store.Catalog.UseCase;
-using Store.Catalog.UseCase.FindAllPrductsUseCase;
+﻿
+using Store.Catalog.Facade.Implementation;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

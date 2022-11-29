@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Facade\" />
+    <Folder Include="Factory\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\@Shared\@Shared.csproj" />
+    <ProjectReference Include="..\Client.Adm\Client.Adm.csproj" />
+    <ProjectReference Include="..\Invoice\Invoice.csproj" />
+    <ProjectReference Include="..\Payment\Payment.csproj" />
+    <ProjectReference Include="..\Product.Adm\Product.Adm.csproj" />
+    <ProjectReference Include="..\Store.Catalog\Store.Catalog.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -44,7 +44,13 @@ namespace MonolithTests.ClientAdm
             Assert.NotNull(response.Id);
             Assert.Equal(response.Name, _client.Name);
             Assert.Equal(response.Email, _client.Email);
-            Assert.Equal(response.Address, _client.Address);
+            Assert.Equal(response.Street, _client.Street);
+            Assert.Equal(response.Number, _client.Number);
+            Assert.Equal(response.City, _client.City);
+            Assert.Equal(response.ZipCode, _client.ZipCode);
+            Assert.Equal(response.Document, _client.Document);
+            Assert.Equal(response.Complement, _client.Complement);
+            Assert.Equal(response.State, _client.State);
             Assert.StrictEqual(response.CreatedAt, _client.CreatedAt);
             Assert.StrictEqual(response.UpdatedAt, _client.UpdatedAt);
 

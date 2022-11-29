@@ -11,14 +11,20 @@ namespace Client.Adm.UseCase.AddClient
             _clientRepository = clientRepository;
         }
 
-        public async Task<AddClientOutputDto>  Execute(AddClientInputDto addClientInputDto)
+        public async Task<AddClientOutputDto> Execute(AddClientInputDto addClientInputDto)
         {
             var input = new ClientProps
             {
                 Id = addClientInputDto.Id,
                 Name = addClientInputDto.Name,
                 Email = addClientInputDto.Email,
-                Address = addClientInputDto.Address,
+                Document = addClientInputDto.Document,
+                Street = addClientInputDto.Street,
+                City = addClientInputDto.City,
+                Number = addClientInputDto.Number,
+                State = addClientInputDto.State,
+                ZipCode = addClientInputDto.ZipCode,
+                Complement = addClientInputDto.Complement,
                 CreatedAt = addClientInputDto.CreatedAt,
                 UpdatedAt = addClientInputDto.UpdatedAt,
             };
@@ -34,7 +40,13 @@ namespace Client.Adm.UseCase.AddClient
                 Id = client._id.GetId(),
                 Name = client.Name,
                 Email = client.Email,
-                Address = client.Address,
+                Document = client.Document,
+                Street = client.Street,
+                City = client.City,
+                Number = client.Number,
+                State = client.State,
+                ZipCode = client.ZipCode,
+                Complement = client.Complement,
                 CreatedAt = client.CreatedAt,
                 UpdatedAt = client.UpdatedAt
             };

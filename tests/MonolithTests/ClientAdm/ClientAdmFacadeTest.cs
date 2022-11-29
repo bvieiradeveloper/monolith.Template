@@ -1,5 +1,6 @@
 ﻿using _Shared.Domain.ValueObject;
 using Client.Adm.Domain.Entity;
+using Client.Adm.Facade.Implementation;
 using Client.Adm.Factory;
 using Client.Adm.Repository.Implementation;
 using Client.Adm.UseCase.AddClient;
@@ -41,23 +42,35 @@ namespace MonolithTests.ClientAdm
 
             AddClientInputDto input = new AddClientInputDto
             {
-               Id = _client._id,
-               Name = _client.Name,
-               Email = _client.Email,
-               Address = _client.Address,
-               CreatedAt = _client.CreatedAt,
-               UpdatedAt = _client.UpdatedAt,
+                Id = _client._id,
+                Name = _client.Name,
+                Email = _client.Email,
+                Document = _client.Document,
+                Street = _client.Street,
+                City = _client.City,
+                Number = _client.Number,
+                State = _client.State,
+                ZipCode = _client.ZipCode,
+                Complement = _client.Complement,
+                CreatedAt = _client.CreatedAt,
+                UpdatedAt = _client.UpdatedAt,
             };
 
             await clientFacade.Add(input);
             var id = _client._id.GetId();
-            var response = _db.Clients.Where(c=>c.Id == id).FirstOrDefault();
+            var response = _db.Clients.Where(c => c.Id == id).FirstOrDefault();
 
             Assert.NotNull(response);
             Assert.Equal(response.Id, _client._id.GetId());
             Assert.Equal(response.Name, _client.Name);
             Assert.Equal(response.Email, _client.Email);
-            Assert.Equal(response.Address, _client.Address);
+            Assert.Equal(response.Street, _client.Street);
+            Assert.Equal(response.Number, _client.Number);
+            Assert.Equal(response.City, _client.City);
+            Assert.Equal(response.ZipCode, _client.ZipCode);
+            Assert.Equal(response.Document, _client.Document);
+            Assert.Equal(response.Complement, _client.Complement);
+            Assert.Equal(response.State, _client.State);
             Assert.StrictEqual(response.CreatedAt, _client.CreatedAt);
             Assert.StrictEqual(response.UpdatedAt, _client.UpdatedAt);
         }
@@ -72,7 +85,13 @@ namespace MonolithTests.ClientAdm
             _db.Add(new ClientModel
             {
                 Id = _client._id.GetId(),
-                Address = _client.Address,
+                Document = _client.Document,
+                Street = _client.Street,
+                City = _client.City,
+                Number = _client.Number,
+                State = _client.State,
+                ZipCode = _client.ZipCode,
+                Complement = _client.Complement,
                 CreatedAt = _client.CreatedAt,
                 UpdatedAt = _client.UpdatedAt,
                 Email = _client.Email,
@@ -80,13 +99,19 @@ namespace MonolithTests.ClientAdm
             });
             await _db.SaveChangesAsync();
 
-            var output = await clientFacade.Find(new Client.Adm.UseCase.FindClient.FindClientInputDto { ClientId = _client._id.GetId()});
+            var output = await clientFacade.Find(new FindClientInputDto { ClientId = _client._id.GetId() });
 
             Assert.NotNull(output);
             Assert.Equal(output.Id, _client._id.GetId());
             Assert.Equal(output.Name, _client.Name);
             Assert.Equal(output.Email, _client.Email);
-            Assert.Equal(output.Address, _client.Address);
+            Assert.Equal(output.Street, _client.Street);
+            Assert.Equal(output.Number, _client.Number);
+            Assert.Equal(output.City, _client.City);
+            Assert.Equal(output.ZipCode, _client.ZipCode);
+            Assert.Equal(output.Document, _client.Document);
+            Assert.Equal(output.Complement, _client.Complement);
+            Assert.Equal(output.State, _client.State);
             Assert.StrictEqual(output.CreatedAt, _client.CreatedAt);
             Assert.StrictEqual(output.UpdatedAt, _client.UpdatedAt);
         }

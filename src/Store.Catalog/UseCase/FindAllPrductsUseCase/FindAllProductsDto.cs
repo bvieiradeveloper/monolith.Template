@@ -2,12 +2,12 @@
 
 namespace Store.Catalog.UseCase.FindAllPrductsUseCase
 {
-    public class FindAllProductsOutputDto
+    internal class FindAllProductsOutputDto
     {
         public IList<FindAllProductsDto> Products { get; set; }
     }
 
-    public class FindAllProductsDto 
+    internal class FindAllProductsDto 
     {
         public string Id { get; set; }
 

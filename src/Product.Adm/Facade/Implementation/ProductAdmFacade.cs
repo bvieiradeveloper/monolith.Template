@@ -1,7 +1,7 @@
 ﻿using Product.Adm.Facade.Interface;
 using Product.Adm.UseCase.AddProduct;
 using Product.Adm.UseCase.CheckStock;
-
+using checkoutUseCase = Product.Adm.UseCase.CheckStock.CheckStockInputDto;
 namespace Product.Adm.Facade.Implementation
 {
     public class ProductAdmFacade : IProductAdmFacade
@@ -21,7 +21,16 @@ namespace Product.Adm.Facade.Implementation
 
         public async Task<CheckStockOutputDto> CheckoutStock(CheckStockInputDto input)
         {
-            return await _checkStockUseCase.Execute(input);
+            var response =  await _checkStockUseCase.Execute(new checkoutUseCase
+            {
+                ProductId = input.ProductId,
+            });
+
+            return new()
+            {
+                ProductId = response.ProductId,
+                Stock = response.Stock,
+            };
         }
     }
 }

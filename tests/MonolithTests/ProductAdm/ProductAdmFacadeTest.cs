@@ -7,6 +7,7 @@ using Product.Adm.Factory;
 using InfraStructure.Model;
 using Product.Adm.UseCase.CheckStock;
 using InfraStructure.Model.ProductAdm;
+using CheckStockInputDto = Product.Adm.Facade.Implementation.CheckStockInputDto;
 
 namespace MonolithTests
 {

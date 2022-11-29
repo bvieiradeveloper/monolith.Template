@@ -1,5 +1,6 @@
-﻿using Client.Adm.UseCase.AddClient;
-using Client.Adm.UseCase.FindClient;
+﻿using Client.Adm.Facade.Implementation;
+using Client.Adm.UseCase.AddClient;
+
 
 namespace Client.Adm.Facade.Interface
 {

@@ -3,6 +3,7 @@ using Client.Adm.Domain.Entity;
 using Client.Adm.Repository.Interface;
 using Client.Adm.UseCase.FindClient;
 using InfraStructure.Context;
+using InfraStructure.Model.Checkout;
 using InfraStructure.Model.ClientAdm;
 
 namespace Client.Adm.Repository.Implementation
@@ -19,7 +20,7 @@ namespace Client.Adm.Repository.Implementation
              _sharedContext.Clients.Add(new ClientModel
              {
                  Id = entity._id.GetId(),
-                 Address = entity.Address,
+                 
                  CreatedAt = entity.CreatedAt,
                  UpdatedAt = entity.UpdatedAt,
                  Email = entity.Email,
@@ -37,7 +38,13 @@ namespace Client.Adm.Repository.Implementation
             {
                 Id = new Id(result.Id),
                 Name = result.Name,
-                Address = result.Address,
+                Document = result.Document,
+                Street = result.Street,
+                City = result.City,
+                Number = result.Number,
+                State = result.State,
+                ZipCode = result.ZipCode,
+                Complement = result.Complement,
                 Email = result.Email,
                 UpdatedAt = result.UpdatedAt,
                 CreatedAt = result.CreatedAt,

@@ -4,6 +4,7 @@ using Store.Catalog.Facade.Interface;
 using Store.Catalog.Repository.Implementation;
 using Store.Catalog.UseCase;
 using Store.Catalog.UseCase.FindAllPrductsUseCase;
+using Store.Catalog.UseCase.FindProductUseCase;
 using System;
 using System.Collections.Generic;
 using System.Linq;

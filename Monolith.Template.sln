@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Catalog", "src\Store.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.Adm", "src\Client.Adm\Client.Adm.csproj", "{2F7AFADB-D4C7-4E45-9A79-1B7C84804BAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment", "src\Payment\Payment.csproj", "{1B179880-12D6-4012-90B2-1E37056A290E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment", "src\Payment\Payment.csproj", "{1B179880-12D6-4012-90B2-1E37056A290E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice", "src\Invoice\Invoice.csproj", "{BDB71F55-AB3B-40BF-9232-4DAAA3545813}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoice", "src\Invoice\Invoice.csproj", "{BDB71F55-AB3B-40BF-9232-4DAAA3545813}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout", "src\Checkout\Checkout.csproj", "{4A4604D6-BF2E-431B-8CF0-82B4AF7D919E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{BDB71F55-AB3B-40BF-9232-4DAAA3545813}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDB71F55-AB3B-40BF-9232-4DAAA3545813}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDB71F55-AB3B-40BF-9232-4DAAA3545813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A4604D6-BF2E-431B-8CF0-82B4AF7D919E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4604D6-BF2E-431B-8CF0-82B4AF7D919E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4604D6-BF2E-431B-8CF0-82B4AF7D919E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4604D6-BF2E-431B-8CF0-82B4AF7D919E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,5 @@
 ﻿using InfraStructure.Context;
 using Payment.Facade;
-using Payment.UseCase.ProcessPayment;
 using static Payment.Domain.Entity.TransactionEntity;
 
 namespace MonolithTests.Payment

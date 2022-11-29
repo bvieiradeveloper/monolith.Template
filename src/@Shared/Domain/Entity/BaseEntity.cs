@@ -14,6 +14,17 @@ namespace _Shared.Domain.Entity
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
 
+        public BaseEntity()
+        {
+        }
+
+        public BaseEntity(Id? id)
+        {
+            _id = id ?? new Id();
+            CreatedAt =  DateTime.Now;
+            UpdatedAt =  DateTime.Now;
+        }
+
         public BaseEntity(Id? id, DateTime? createdAt, DateTime? updatedAt)
         {
             _id = id ?? new Id();

@@ -1,6 +1,7 @@
 ﻿using Client.Adm.Facade.Interface;
 using Client.Adm.UseCase.AddClient;
 using Client.Adm.UseCase.FindClient;
+using FindUseCaseInput = Client.Adm.UseCase.FindClient.FindClientInputDto;
 
 namespace Client.Adm.Facade.Implementation
 {
@@ -18,9 +19,37 @@ namespace Client.Adm.Facade.Implementation
             await _addClienttUseCase.Execute(addClientInputDto);
         }
 
-        public async Task<FindClientOutputDto> Find(FindClientInputDto findClientInputDto)
+        public async Task<FindClientOutputDto?> Find(FindClientInputDto findClientInputDto)
         {
-            return await _findClientUseCase.Execute(findClientInputDto);
+            try
+            {
+                var response = await _findClientUseCase.Execute(new FindUseCaseInput
+                {
+                    ClientId = findClientInputDto.ClientId,
+                });
+
+                return new()
+                {
+                    Id = response.Id,
+                    Name = response.Name,
+                    Document = response.Document,
+                    Street = response.Street,
+                    City = response.City,
+                    Complement = response.Complement,
+                    Number = response.Number,
+                    State = response.State,
+                    ZipCode = response.ZipCode,
+                    Email = response.Email,
+                    CreatedAt = response.CreatedAt,
+                    UpdatedAt = response.UpdatedAt
+                };
+            }
+            catch (Exception ex)
+            {
+
+                return new FindClientOutputDto();
+            }
+
         }
     }
 }

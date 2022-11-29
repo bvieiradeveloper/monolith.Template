@@ -8,12 +8,12 @@ namespace Store.Catalog.UseCase.FindAllPrductsUseCase
     public class FindAllProductsUseCase
     {
         private IProductRepository _productRepository;
-        public FindAllProductsUseCase(IProductRepository productRepository)
+        internal FindAllProductsUseCase(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
 
-        public async Task<FindAllProductsOutputDto> Execute() 
+        internal async Task<FindAllProductsOutputDto> Execute() 
         {
             var products = await _productRepository.FindAll();
 

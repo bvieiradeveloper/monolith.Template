@@ -2,6 +2,7 @@
 using Moq;
 using Store.Catalog.Repository.Interface;
 using Store.Catalog.UseCase;
+using Store.Catalog.UseCase.FindProductUseCase;
 
 namespace MonolithTests.StoreCatalog
 {

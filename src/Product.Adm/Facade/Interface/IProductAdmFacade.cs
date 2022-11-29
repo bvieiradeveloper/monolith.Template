@@ -1,5 +1,6 @@
-﻿using Product.Adm.UseCase.AddProduct;
-using Product.Adm.UseCase.CheckStock;
+﻿using Product.Adm.Facade.Implementation;
+using Product.Adm.UseCase.AddProduct;
+
 
 namespace Product.Adm.Facade.Interface
 {

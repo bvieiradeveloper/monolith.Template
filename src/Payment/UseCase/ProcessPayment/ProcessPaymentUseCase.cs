@@ -1,18 +1,19 @@
 ﻿using Payment.Domain.Entity;
 using Payment.Repository.Interface;
+using System.Runtime.CompilerServices;
 using static Payment.Domain.Entity.TransactionEntity;
-
+[assembly: InternalsVisibleTo("MonolithTests")]
 namespace Payment.UseCase.ProcessPayment
 {
     public class ProcessPaymentUseCase
     {
         readonly IPaymentRepository _paymentRepository;
-        public ProcessPaymentUseCase(IPaymentRepository paymentRepository)
+        internal ProcessPaymentUseCase(IPaymentRepository paymentRepository)
         {
             _paymentRepository = paymentRepository;
         }
 
-        public async Task<ProcessPaymentOutputDto> Execute(ProcessPaymentInputDto input)
+        internal async Task<ProcessPaymentOutputDto> Execute(ProcessPaymentInputDto input)
         {
             var transactionProps = new TransactionProps
             {

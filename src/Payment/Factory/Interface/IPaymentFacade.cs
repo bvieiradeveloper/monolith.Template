@@ -1,4 +1,5 @@
-﻿using Payment.UseCase.ProcessPayment;
+﻿
+using Payment.Facade;
 
 namespace Payment.Factory.Interface
 {

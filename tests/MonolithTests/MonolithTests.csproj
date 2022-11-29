@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Checkout\Checkout.csproj" />
     <ProjectReference Include="..\..\src\Client.Adm\Client.Adm.csproj" />
     <ProjectReference Include="..\..\src\Invoice\Invoice.csproj" />
     <ProjectReference Include="..\..\src\Payment\Payment.csproj" />

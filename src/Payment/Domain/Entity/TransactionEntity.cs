@@ -3,7 +3,7 @@ using _Shared.Domain.Interface;
 
 namespace Payment.Domain.Entity
 {
-    public partial class TransactionEntity : BaseEntity, IAggregatorRoot
+    public partial class TransactionEntity : BaseEntity, IAggregateRoot
     {
 
         public decimal Amount { get; private set; }

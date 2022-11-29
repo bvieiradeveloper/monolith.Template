@@ -44,7 +44,13 @@ namespace MonolithTests.ClientAdm
                 Id = _client._id,
                 Name = _client.Name,
                 Email = _client.Email,
-                Address = _client.Address,
+                Document = _client.Document,
+                Street = _client.Street,
+                City = _client.City,
+                Number = _client.Number,
+                State = _client.State,
+                ZipCode = _client.ZipCode,
+                Complement = _client.Complement,
             };
 
             var response = await useCase.Execute(input);
@@ -55,7 +61,13 @@ namespace MonolithTests.ClientAdm
             Assert.NotNull(response.Id);
             Assert.Equal(response.Name, _client.Name);
             Assert.Equal(response.Email, _client.Email);
-            Assert.Equal(response.Address, _client.Address);
+            Assert.Equal(response.Street, _client.Street);
+            Assert.Equal(response.Number, _client.Number);
+            Assert.Equal(response.City, _client.City);
+            Assert.Equal(response.ZipCode, _client.ZipCode);
+            Assert.Equal(response.Document, _client.Document);
+            Assert.Equal(response.Complement, _client.Complement);
+            Assert.Equal(response.State, _client.State);
         }
     }
 }

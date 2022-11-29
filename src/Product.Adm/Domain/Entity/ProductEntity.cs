@@ -4,7 +4,7 @@ using Product.Adm.Domain.ValueObject;
 
 namespace Product.Adm.Domain.Entity
 {
-    public class ProductEntity : BaseEntity, IAggregatorRoot
+    public class ProductEntity : BaseEntity, IAggregateRoot
     {
         public ProductEntity(AddProductInputDto productProps) : base(productProps.id, null, null)
         {

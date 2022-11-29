@@ -6,7 +6,7 @@ using _Shared.Domain.ValueObject;
 
 namespace Store.Catalog.Domain.Entity
 {
-    public class ProductEntity : BaseEntity, IAggregatorRoot
+    public class ProductEntity : BaseEntity, IAggregateRoot
     {
         public ProductEntity(ProductProps productProps) : base(productProps._id, null, null)
         {

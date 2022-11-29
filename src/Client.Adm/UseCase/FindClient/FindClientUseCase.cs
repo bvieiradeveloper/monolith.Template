@@ -1,7 +1,10 @@
 ﻿using Client.Adm.Repository.Interface;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("MonolithTests.ClientAdm")]
 namespace Client.Adm.UseCase.FindClient
 {
+
     public class FindClientUseCase
     {
         private readonly IClientRepository _clientRepository;
@@ -10,7 +13,7 @@ namespace Client.Adm.UseCase.FindClient
             _clientRepository = clientRepository;
         }
 
-        public async Task<FindClientOutputDto> Execute(FindClientInputDto findClientInputDto)
+        internal async Task<FindClientOutputDto> Execute(FindClientInputDto findClientInputDto)
         {
             var client = await _clientRepository.Find(findClientInputDto.ClientId);
 
@@ -19,7 +22,13 @@ namespace Client.Adm.UseCase.FindClient
                 Id = client._id.GetId(),
                 Name = client.Name,
                 Email = client.Email,
-                Address = client.Address,
+                Document = client.Document,
+                Street = client.Street,
+                City = client.City,
+                Complement = client.Complement,
+                Number = client.Number,
+                State = client.State,
+                ZipCode = client.ZipCode,
                 CreatedAt = client.CreatedAt,
                 UpdatedAt = client.UpdatedAt,
             };

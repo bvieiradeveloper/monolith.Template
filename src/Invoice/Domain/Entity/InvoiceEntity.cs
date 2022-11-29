@@ -4,7 +4,7 @@ using Invoice.Domain.ValueObject;
 
 namespace Invoice.Domain.Entity
 {
-    public class InvoiceEntity : BaseEntity, IAggregatorRoot
+    public class InvoiceEntity : BaseEntity, IAggregateRoot
     {
         public string Name { get; private set; }
         public string Document { get; private set; }

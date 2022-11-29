@@ -63,7 +63,7 @@ namespace MonolithTests.StoreCatalog
             await _db.ProductsCatalog.AddAsync(_productModel[0]);
             await _db.SaveChangesAsync();
 
-            var response = await productStoreCatalogFacade.Find(new FindProductInputDto { Id = "1"});
+            var response = await productStoreCatalogFacade.Find(new(){ Id = "1"});
 
 
             Assert.Equal(response.Id, _productModel[0].Id);

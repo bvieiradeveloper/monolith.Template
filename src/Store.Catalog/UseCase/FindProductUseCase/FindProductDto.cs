@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("MonolithTests")]
 namespace Store.Catalog.UseCase
 {
-    public class FindProductInputDto
+    internal class FindProductInputDto
     {
         public string Id { get; set; }
     }
 
-    public class FindProductOutputDto
+    internal class FindProductOutputDto
     {
         public string Id { get; set; }
         public string Name { get; set; }

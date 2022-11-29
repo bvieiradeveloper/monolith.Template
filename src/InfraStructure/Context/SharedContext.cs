@@ -1,8 +1,10 @@
-﻿using InfraStructure.Model.ClientAdm;
+﻿using InfraStructure.Model.Checkout;
+using InfraStructure.Model.ClientAdm;
 using InfraStructure.Model.Invoice;
 using InfraStructure.Model.Payment;
 using InfraStructure.Model.ProductAdm;
 using Microsoft.EntityFrameworkCore;
+using Product = InfraStructure.Model.Invoice.Product;
 
 namespace InfraStructure.Context
 {
@@ -40,5 +42,8 @@ namespace InfraStructure.Context
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<InvoiceProduct> InvoiceProducts { get; set; }
+
+        public DbSet<Model.Checkout.Product> CheckoutProducts { get; set; }
+        public DbSet<Model.Checkout.Client> CheckoutClients { get; set; }
     }
 }
