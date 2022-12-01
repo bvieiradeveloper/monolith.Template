@@ -45,11 +45,11 @@ namespace MonolithTests
                 Stock = 10
             };
 
-            await productFactory.AddProduct(input);
-            var response = await productRepository.Find(input.id);
+            var product = await productFactory.AddProduct(input);
+            var response = await productRepository.Find(product.id);
 
-            Assert.NotNull(input.id);
-            Assert.Equal(response.Id, input.id);
+            Assert.NotNull(product.id);
+            Assert.Equal(response.Id, product.id);
             Assert.Equal(response.Name, "Product 1");
             Assert.Equal(response.Description, "Product 1 description");
             Assert.Equal(response.PurchasePrice, 100);

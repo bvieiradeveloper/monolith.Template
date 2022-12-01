@@ -27,7 +27,13 @@ namespace MonolithTests.ClientAdm
             {
                 Name = "Client 1",
                 Email = "Xunit@x.com",
-                Address = "418 Dewey St\r\nKernersville, North Carolina(NC), 27284",
+                Document = "0000",
+                Street = "My Street",
+                Number = "123",
+                Complement = "aaaa",
+                City = "New York",
+                State = "Kingston",
+                ZipCode = "12401",
             };
 
             _client = new ClientEntity(input);
@@ -55,12 +61,12 @@ namespace MonolithTests.ClientAdm
                 UpdatedAt = _client.UpdatedAt,
             };
 
-            await clientFacade.Add(input);
-            var id = _client._id.GetId();
-            var response = _db.Clients.Where(c => c.Id == id).FirstOrDefault();
+            var client = await clientFacade.Add(input);
+ 
+            var response = _db.Clients.Where(c => c.Id == client.Id).FirstOrDefault();
 
             Assert.NotNull(response);
-            Assert.Equal(response.Id, _client._id.GetId());
+            Assert.Equal(response.Id, client.Id);
             Assert.Equal(response.Name, _client.Name);
             Assert.Equal(response.Email, _client.Email);
             Assert.Equal(response.Street, _client.Street);
@@ -83,7 +89,7 @@ namespace MonolithTests.ClientAdm
 
             _db.Add(new ClientModel
             {
-                Id = _client._id.GetId(),
+                Id = "1",
                 Document = _client.Document,
                 Street = _client.Street,
                 City = _client.City,
@@ -98,10 +104,10 @@ namespace MonolithTests.ClientAdm
             });
             await _db.SaveChangesAsync();
 
-            var output = await clientFacade.Find(new FindClientInputDto { ClientId = _client._id.GetId() });
+            var output = await clientFacade.Find(new FindClientInputDto { ClientId = "1" });
 
             Assert.NotNull(output);
-            Assert.Equal(output.Id, _client._id.GetId());
+            Assert.Equal(output.Id, "1");
             Assert.Equal(output.Name, _client.Name);
             Assert.Equal(output.Email, _client.Email);
             Assert.Equal(output.Street, _client.Street);

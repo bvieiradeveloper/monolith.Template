@@ -19,9 +19,16 @@ namespace MonolithTests.ClientAdm
             _db = InMemoryDb.InitDb();
             var input = new ClientProps
             {
+                Id = new("1"),
                 Name = "Client 1",
                 Email = "Xunit@x.com",
-                Address = "418 Dewey St\r\nKernersville, North Carolina(NC), 27284",
+                Document = "0000",
+                Street = "My Street",
+                Number = "123",
+                Complement = "aaaa",
+                City = "New York",
+                State = "Kingston",
+                ZipCode = "12401",
             };
 
             _client = new ClientEntity(input);
