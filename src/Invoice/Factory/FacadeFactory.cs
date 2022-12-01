@@ -6,7 +6,7 @@ using Invoice.UseCase.Generate;
 
 namespace Invoice.Factory
 {
-    public class FacadeFactory
+    public static class InvoiceFacadeFactory
     {
         public static  InvoiceFacade Create(SharedContext _sharedContext)
         {

@@ -1,4 +1,5 @@
-﻿using Product.Adm.Facade.Interface;
+﻿using _Shared.Domain.ValueObject;
+using Product.Adm.Facade.Interface;
 using Product.Adm.UseCase.AddProduct;
 using Product.Adm.UseCase.CheckStock;
 using checkoutUseCase = Product.Adm.UseCase.CheckStock.CheckStockInputDto;
@@ -14,9 +15,27 @@ namespace Product.Adm.Facade.Implementation
             _checkStockUseCase = checkStockUseCase;
         }
 
-        public async Task AddProduct(AddProductInputDTO input)
+        public async Task<AddProductOutputDto> AddProduct(AddProductInputDto input)
         {
-             await _addProductUseCase.Execute(input);
+            var response = await _addProductUseCase.Execute(new()
+            {
+                id = new Id(input.id),
+                Name = input.Name,
+                Description = input.Description,
+                PurchasePrice = input.PurchasePrice,
+                Stock = input.Stock,
+            });
+
+             return new()
+             {
+                 id = response.id.GetId(),
+                 Name = response.Name,
+                 Description= response.Description,
+                 PurchasePrice= response.PurchasePrice,
+                 Stock= response.Stock,
+                 CreatedAt = DateTime.Now,
+                 UpdatedAt = DateTime.Now,
+             };
         }
 
         public async Task<CheckStockOutputDto> CheckoutStock(CheckStockInputDto input)

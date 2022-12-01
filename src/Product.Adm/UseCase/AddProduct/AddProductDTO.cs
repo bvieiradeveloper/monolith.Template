@@ -12,7 +12,7 @@ namespace Product.Adm.UseCase.AddProduct
 
     public class AddProductOutputDTO : AddProductInputDto 
     {
-        public DateTime CreatedAt  { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? CreatedAt  { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }

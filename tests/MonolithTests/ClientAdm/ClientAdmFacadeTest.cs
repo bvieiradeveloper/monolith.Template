@@ -3,7 +3,6 @@ using Client.Adm.Domain.Entity;
 using Client.Adm.Facade.Implementation;
 using Client.Adm.Factory;
 using Client.Adm.Repository.Implementation;
-using Client.Adm.UseCase.AddClient;
 using InfraStructure.Context;
 using InfraStructure.Model.ClientAdm;
 using Product.Adm.Facade.Implementation;

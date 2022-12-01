@@ -10,4 +10,5 @@
         public string ProductId { get; init; }
         public long Stock { get; init; }
     }
+
 }

@@ -20,7 +20,13 @@ namespace Client.Adm.Repository.Implementation
              _sharedContext.Clients.Add(new ClientModel
              {
                  Id = entity._id.GetId(),
-                 
+                 Street = entity.Street,
+                 City = entity.City,
+                 Complement = entity.Complement,
+                 Document = entity.Document,
+                 Number = entity.Number,
+                 State = entity.State,
+                 ZipCode =entity.ZipCode,
                  CreatedAt = entity.CreatedAt,
                  UpdatedAt = entity.UpdatedAt,
                  Email = entity.Email,

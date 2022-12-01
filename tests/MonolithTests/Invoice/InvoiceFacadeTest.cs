@@ -70,7 +70,7 @@ namespace MonolithTests.Invoice
         [Fact]
         public async Task ShouldGenerateAInvoice()
         {
-            InvoiceFacade invoiceFacade = FacadeFactory.Create(_sharedContext);
+            InvoiceFacade invoiceFacade = InvoiceFacadeFactory.Create(_sharedContext);
 
 
             var response = await invoiceFacade.Generate(new GenerateInvoiceInputDto
@@ -120,7 +120,7 @@ namespace MonolithTests.Invoice
         [Fact]
         public async Task ShouldFindAInvoice()
         {
-            InvoiceFacade invoiceFacade = FacadeFactory.Create(_sharedContext);
+            InvoiceFacade invoiceFacade = InvoiceFacadeFactory.Create(_sharedContext);
 
             await invoiceFacade.Generate(new GenerateInvoiceInputDto
             {

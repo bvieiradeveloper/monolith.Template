@@ -13,9 +13,9 @@ using System.Threading.Tasks;
 
 namespace Store.Catalog.Factory
 {
-    public class ProductStoreCatalogFacadeFactory
+    public static class ProductStoreCatalogFacadeFactory
     {
-        public static IProductStoreCatalogFacade Create(SharedContext _db)
+        public static ProductStoreCatalogFacade Create(SharedContext _db)
         {
             var productRepository = new ProductRepository(_db);
             var findProductUseCase = new FindProductUseCase(productRepository);

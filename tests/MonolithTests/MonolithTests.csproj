@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.10" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="Moq" Version="4.18.2" />
@@ -30,6 +31,7 @@
     <ProjectReference Include="..\..\src\Client.Adm\Client.Adm.csproj" />
     <ProjectReference Include="..\..\src\Invoice\Invoice.csproj" />
     <ProjectReference Include="..\..\src\Payment\Payment.csproj" />
+    <ProjectReference Include="..\..\src\Product.Adm.API\Product.Adm.API.csproj" />
     <ProjectReference Include="..\..\src\Product.Adm\Product.Adm.csproj" />
     <ProjectReference Include="..\..\src\Store.Catalog\Store.Catalog.csproj" />
   </ItemGroup>
