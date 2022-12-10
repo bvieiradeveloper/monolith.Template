@@ -6,6 +6,8 @@ using Product.Adm.Factory;
 
 namespace Product.Adm.API.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class InvoiceController : ControllerBase
     {
 
@@ -16,7 +18,7 @@ namespace Product.Adm.API.Controllers
             _sharedContext = sharedContext;
         }
 
-        [HttpGet("/{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult> Get(string id)
         {
             try

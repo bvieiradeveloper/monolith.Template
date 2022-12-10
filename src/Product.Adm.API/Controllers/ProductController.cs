@@ -6,8 +6,8 @@ using Product.Adm.Factory;
 
 namespace Product.Adm.API.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly ILogger<ProductController> _logger;
@@ -42,7 +42,7 @@ namespace Product.Adm.API.Controllers
             }
         }
 
-        [HttpGet("/{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult> Get(string id)
         {
             try

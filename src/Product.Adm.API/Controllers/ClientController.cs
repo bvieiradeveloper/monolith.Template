@@ -11,8 +11,8 @@ using InMemoryDb = InfraStructure.Context.InMemoryDb;
 
 namespace Product.Adm.API.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
     public class ClientController : ControllerBase
     {
 
@@ -53,7 +53,7 @@ namespace Product.Adm.API.Controllers
             }
         }
 
-        [HttpGet("/{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult> Get(string id)
         {
             try

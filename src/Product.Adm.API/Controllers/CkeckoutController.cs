@@ -17,8 +17,11 @@ using Store.Catalog.Factory;
 using PlaceOrderInputDto = Product.Adm.API.Dto.Input.Checkout.PlaceOrderInputDto;
 using PlaceOrderProductInputDto = Checkout.UseCase.Checkout.PlaceOrderProductInputDto;
 
+
 namespace Product.Adm.API.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CkeckoutController : ControllerBase
     {
 
